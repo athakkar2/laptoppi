@@ -1,0 +1,20 @@
+	//Code
+
+	.global _Z3dotPiS_i
+_Z3dotPiS_i:
+	mov x7, 0
+loop:
+	ldrsb x3, [x0],4
+	ldrsb x4, [x1],4
+	mul x5, x3, x4
+	add x7, x7, x5
+	sub x2,x2,1
+	cmp x2, 0
+	bne loop
+	
+	mov x0, x7
+	
+	ret
+	
+	
+	

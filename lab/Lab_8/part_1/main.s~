@@ -1,0 +1,258 @@
+	.arch armv8-a
+	.file	"main.cc"
+	.text
+	.section	.text.startup,"ax",@progbits
+	.align	2
+	.p2align 4,,11
+	.global	main
+	.type	main, %function
+main:
+.LFB1815:
+	.cfi_startproc
+	stp	x29, x30, [sp, -112]!
+	.cfi_def_cfa_offset 112
+	.cfi_offset 29, -112
+	.cfi_offset 30, -104
+	adrp	x0, .LANCHOR0
+	add	x3, x0, :lo12:.LANCHOR0
+	mov	x29, sp
+	stp	x21, x22, [sp, 32]
+	.cfi_offset 21, -80
+	.cfi_offset 22, -72
+	add	x22, sp, 80
+	ldr	w4, [x3, 8]
+	ldr	x6, [x0, #:lo12:.LANCHOR0]
+	add	x21, sp, 96
+	ldr	x5, [x3, 16]
+	stp	x19, x20, [sp, 16]
+	ldr	w3, [x3, 24]
+	stp	x23, x24, [sp, 48]
+	.cfi_offset 19, -96
+	.cfi_offset 20, -88
+	.cfi_offset 23, -64
+	.cfi_offset 24, -56
+	adrp	x19, :got:_ZSt4cout
+	mov	w2, 3
+	str	x6, [sp, 80]
+	mov	x1, x21
+	str	w4, [x22, 8]
+	mov	x0, x22
+	str	x5, [sp, 96]
+	mov	x20, 1
+	str	w3, [x21, 8]
+	bl	_Z3dotPiS_i
+	ldr	x19, [x19, #:got_lo12:_ZSt4cout]
+	mov	x1, x0
+	mov	w23, 10
+	mov	w24, 32
+	mov	x0, x19
+	bl	_ZNSo9_M_insertIlEERSoT_
+	mov	x2, x20
+	add	x1, sp, 79
+	strb	w23, [sp, 79]
+	bl	_ZSt16__ostream_insertIcSt11char_traitsIcEERSt13basic_ostreamIT_T0_ES6_PKS3_l
+	mov	x2, 3
+	mov	x1, 2
+	mov	x0, x20
+	bl	_Z1fmmm
+	mov	x1, x0
+	mov	x0, x19
+	bl	_ZNSo9_M_insertImEERSoT_
+	strb	w23, [sp, 96]
+	mov	x1, x21
+	mov	x2, x20
+	bl	_ZSt16__ostream_insertIcSt11char_traitsIcEERSt13basic_ostreamIT_T0_ES6_PKS3_l
+	mov	x2, x20
+	mov	x1, 5
+	mov	x0, 2
+	bl	_Z1fmmm
+	mov	x1, x0
+	mov	x0, x19
+	bl	_ZNSo9_M_insertImEERSoT_
+	strb	w23, [sp, 96]
+	mov	x1, x21
+	mov	x2, x20
+	bl	_ZSt16__ostream_insertIcSt11char_traitsIcEERSt13basic_ostreamIT_T0_ES6_PKS3_l
+	mov	x2, 5
+	mov	x1, 4
+	mov	x0, 3
+	bl	_Z12order_of_opsmmm
+	mov	x1, x0
+	mov	x0, x19
+	bl	_ZNSo9_M_insertImEERSoT_
+	strb	w23, [sp, 96]
+	mov	x2, x20
+	mov	x1, x21
+	bl	_ZSt16__ostream_insertIcSt11char_traitsIcEERSt13basic_ostreamIT_T0_ES6_PKS3_l
+	mov	x0, 5
+	bl	_Z12count3nplus1m
+	mov	x1, x0
+	mov	x0, x19
+	bl	_ZNSo9_M_insertImEERSoT_
+	mov	x2, x20
+	mov	x1, x21
+	strb	w23, [sp, 96]
+	bl	_ZSt16__ostream_insertIcSt11char_traitsIcEERSt13basic_ostreamIT_T0_ES6_PKS3_l
+	mov	x0, 17
+	bl	_Z12count3nplus1m
+	mov	x1, x0
+	mov	x0, x19
+	bl	_ZNSo9_M_insertImEERSoT_
+	mov	x2, x20
+	mov	x1, x21
+	strb	w23, [sp, 96]
+	bl	_ZSt16__ostream_insertIcSt11char_traitsIcEERSt13basic_ostreamIT_T0_ES6_PKS3_l
+	mov	x3, 2
+	mov	x2, 5
+	movk	x3, 0x4, lsl 32
+	movk	x2, 0x9, lsl 32
+	mov	x0, x21
+	mov	w1, 4
+	stp	x3, x2, [sp, 96]
+	bl	_Z11double_eachPKji
+.L2:
+	add	x1, x21, x20, lsl 2
+	mov	x0, x19
+	add	x20, x20, 1
+	ldr	w1, [x1, -4]
+	bl	_ZNSo9_M_insertImEERSoT_
+	strb	w24, [sp, 80]
+	mov	x1, x22
+	mov	x2, 1
+	bl	_ZSt16__ostream_insertIcSt11char_traitsIcEERSt13basic_ostreamIT_T0_ES6_PKS3_l
+	cmp	x20, 5
+	bne	.L2
+	mov	w20, 10
+	mov	x1, x22
+	mov	x0, x19
+	mov	x2, 1
+	strb	w20, [sp, 80]
+	bl	_ZSt16__ostream_insertIcSt11char_traitsIcEERSt13basic_ostreamIT_T0_ES6_PKS3_l
+	ldr	x1, [x19]
+	mov	w22, -75
+	mov	x0, 39630
+	ldr	x2, [x1, -24]
+	add	x2, x19, x2
+	ldr	w1, [x2, 24]
+	and	w1, w1, w22
+	orr	w1, w1, 8
+	str	w1, [x2, 24]
+	bl	_Z9clearlow4m
+	mov	x1, x0
+	mov	x0, x19
+	bl	_ZNSo9_M_insertImEERSoT_
+	mov	x1, x21
+	mov	x2, 1
+	strb	w20, [sp, 96]
+	bl	_ZSt16__ostream_insertIcSt11char_traitsIcEERSt13basic_ostreamIT_T0_ES6_PKS3_l
+	mov	x0, 45057
+	movk	x0, 0xface, lsl 16
+	bl	_Z11setbits5_12m
+	ldr	x2, [x19]
+	mov	x1, x0
+	mov	x0, x19
+	ldr	x3, [x2, -24]
+	add	x3, x19, x3
+	ldr	w2, [x3, 24]
+	and	w2, w2, w22
+	orr	w2, w2, 8
+	str	w2, [x3, 24]
+	bl	_ZNSo9_M_insertImEERSoT_
+	strb	w20, [sp, 96]
+	mov	x1, x21
+	mov	x2, 1
+	bl	_ZSt16__ostream_insertIcSt11char_traitsIcEERSt13basic_ostreamIT_T0_ES6_PKS3_l
+	ldr	x1, [x19]
+	mov	x0, 52719
+	movk	x0, 0x89ab, lsl 16
+	movk	x0, 0x4567, lsl 32
+	ldr	x2, [x1, -24]
+	movk	x0, 0x123, lsl 48
+	add	x2, x19, x2
+	ldr	w1, [x2, 24]
+	and	w1, w1, w22
+	orr	w1, w1, 8
+	str	w1, [x2, 24]
+	bl	_Z13togglebits4_9m
+	mov	x1, x0
+	mov	x0, x19
+	bl	_ZNSo9_M_insertImEERSoT_
+	mov	x1, x21
+	mov	x2, 1
+	strb	w20, [sp, 96]
+	bl	_ZSt16__ostream_insertIcSt11char_traitsIcEERSt13basic_ostreamIT_T0_ES6_PKS3_l
+	mov	w0, 0
+	ldp	x19, x20, [sp, 16]
+	ldp	x21, x22, [sp, 32]
+	ldp	x23, x24, [sp, 48]
+	ldp	x29, x30, [sp], 112
+	.cfi_restore 30
+	.cfi_restore 29
+	.cfi_restore 23
+	.cfi_restore 24
+	.cfi_restore 21
+	.cfi_restore 22
+	.cfi_restore 19
+	.cfi_restore 20
+	.cfi_def_cfa_offset 0
+	ret
+	.cfi_endproc
+.LFE1815:
+	.size	main, .-main
+	.align	2
+	.p2align 4,,11
+	.type	_GLOBAL__sub_I_main, %function
+_GLOBAL__sub_I_main:
+.LFB2313:
+	.cfi_startproc
+	stp	x29, x30, [sp, -32]!
+	.cfi_def_cfa_offset 32
+	.cfi_offset 29, -32
+	.cfi_offset 30, -24
+	mov	x29, sp
+	str	x19, [sp, 16]
+	.cfi_offset 19, -16
+	adrp	x19, .LANCHOR1
+	add	x19, x19, :lo12:.LANCHOR1
+	mov	x0, x19
+	bl	_ZNSt8ios_base4InitC1Ev
+	mov	x1, x19
+	adrp	x0, :got:_ZNSt8ios_base4InitD1Ev
+	ldr	x19, [sp, 16]
+	adrp	x2, __dso_handle
+	ldp	x29, x30, [sp], 32
+	.cfi_restore 30
+	.cfi_restore 29
+	.cfi_restore 19
+	.cfi_def_cfa_offset 0
+	add	x2, x2, :lo12:__dso_handle
+	ldr	x0, [x0, #:got_lo12:_ZNSt8ios_base4InitD1Ev]
+	b	__cxa_atexit
+	.cfi_endproc
+.LFE2313:
+	.size	_GLOBAL__sub_I_main, .-_GLOBAL__sub_I_main
+	.section	.init_array,"aw"
+	.align	3
+	.xword	_GLOBAL__sub_I_main
+	.section	.rodata
+	.align	3
+	.set	.LANCHOR0,. + 0
+.LC0:
+	.word	-1
+	.word	1
+	.word	2
+	.zero	4
+.LC1:
+	.word	1
+	.word	-2
+	.word	1
+	.bss
+	.align	3
+	.set	.LANCHOR1,. + 0
+	.type	_ZStL8__ioinit, %object
+	.size	_ZStL8__ioinit, 1
+_ZStL8__ioinit:
+	.zero	1
+	.hidden	__dso_handle
+	.ident	"GCC: (Debian 10.2.1-6) 10.2.1 20210110"
+	.section	.note.GNU-stack,"",@progbits
