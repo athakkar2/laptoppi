@@ -1,0 +1,11 @@
+#include <iostream>
+using namespace std;
+
+int sum(const int x[], int len);
+int dot(const int y[], int len1, const int z[], int len2)
+
+int main() {
+  int x[] = {1, 2, 3, 4, 5};
+  int s = sum(x, 5);
+  cout << s;
+}
