@@ -1,0 +1,5 @@
+a.out
+EE390_2022S_LabSectionC
+filecopier.cpp
+filecopier.cpp~
+test.txt
