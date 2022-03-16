@@ -1,0 +1,12 @@
+	.global f
+f:
+	mov w0, w5 // w0 = w5, high part of x0 = 0
+	//x0 = 0x000000000[whatever is in w0]
+	//111111111111111111111111111111111111111111 = -1
+	//000000000000000011111111111111111111111111 != -1
+
+	mov x2, #254 // immediate mode
+	ldr x3, [x4] // x3 = load from memory at location x4
+	ldr x3, [x4], #8 //x3 = load from memory[x4], then x4 = x4+8
+	ldr x5, =0x0123456789ABCDEF //pseudo instruction
+	ldr x5, [pc, ####] //pc relative, meaning load value from pc address plus some value
