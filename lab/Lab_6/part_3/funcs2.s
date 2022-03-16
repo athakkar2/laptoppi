@@ -1,0 +1,27 @@
+	.global _Z3sumi
+_Z3sumi:
+	mov w1, w0
+	mov w0, 0
+	mov w2, 1
+loop:
+	add w0, w0, w2
+	add w2, w2, 1
+	cmp w2, w1
+	ble loop
+	ret
+
+
+	.global _Z5sumSqii
+_Z5sumSqii:
+	mov w2, w0
+	mov w3, w1
+	mov w0, 0
+	mov w1, 0
+loop2:
+	mul w1, w2, w2
+	add w0, w1, w0
+	add w2, w2, 1
+	cmp w2, w3
+	ble loop2
+	ret
+	
